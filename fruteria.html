@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: mifuente1;
+      src: url(ATypewriterForMe.ttf);
+    }
+    @font-face {
+      font-family: mifuente2;
+      src: url(RifficFree.ttf);
+    }
+
+    * {
+      margin: 0;
+      font-family: mifuente1;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+    }
+
+    #VentanaContenedor {
+      background-color: #b10303;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      padding: 10px;
+      width: fit-content;
+    }
+
+    #contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      border: solid 3px black;
+      background-color: #fcc717;
+      height: 600px;
+      width: 800px;
+      padding: 0px 55px;
+      border-radius: 5px;
+    }
+    hr {
+      background-color: #0f5416;
+      height: 7px;
+      width: 300px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    #productos {
+      color: #0f5416;
+      font-family: mifuente2;
+      font-size: 2.7rem;
+    }
+    #vegetales {
+      color: white;
+      font-family: mifuente2;
+      font-size: 2.7rem;
+    }
+
+    #title {
+      display:inline-block;
+      justify-content: space-evenly;
+      text-align: center;
+      padding-top: 50px;
+    }
+    label {
+      color: #0f5416;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    #boton {
+      background-color: #009045;
+      color: white;
+      text-align: center;
+      width: 120px;
+      height: 35px;
+      border-radius: 10px;
+      font-size: 1.3rem;
+    }
+    #imagen {
+      width: 250px;
+      height: 250px;
+    }
+    #title2{
+      color: #0f5416;
+  text-decoration: underline;
+  text-align: center;
+  padding-bottom: 30px;
+    }
+
+    #formulario{
+      padding-top: 100px;
+      text-align: right;
+      padding-left: 90px;
+    }
+
+  </style>
+  <body>
+    <div id="VentanaContenedor">
+      <div id="contenedor">
+        <div id="title">
+        <hr />
+        <h1 id="productos">PRODUCTOS</h1>
+        <h1 id="vegetales">VEGETALES</h1>
+        <hr />
+        </div>
+
+        <div id="formulario">
+          <h2 id="title2">NUEVO ARTICULO</h2>
+          <form action="ProductosVegetales.php" method="post">
+            <table id="tabla">
+              <tr>
+                <td>
+                  <label for="nombre">Nombre:</label>
+                </td>
+                <td>
+                  <input type="text" name="nombre" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="descripcion">Descripcion:</label>
+                </td>
+                <td>
+                  <input type="text" name="descripcion" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="stock">Stock:</label>
+                </td>
+                <td>
+                  <input type="number" name="stock" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="precio">Precio:</label>
+                </td>
+                <td>
+                  <input type="number" name="precio" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="submit" id="boton" value="Enviar" />
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <img src="imagen.png" alt="icono fruteria" id="imagen" />
+      </div>
+    </div>
+  </body>
+</html>
